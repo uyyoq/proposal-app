@@ -1,9 +1,15 @@
-import Navbar from "../components/Navbar/navbar";
+import React, { useEffect } from 'react'
+import { useRouter, } from 'next/router'
 
-export default function Home() {
+const Home = () => {
+  const router = useRouter()
+  useEffect(() => {
+    router.push("/bestMenu")
+  }, [])
   return (
-   <div>
-     <Navbar />
-   </div>
+    <></>
   )
+
 }
+
+export default Home;
