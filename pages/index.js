@@ -4,7 +4,7 @@ import { useRouter, } from 'next/router'
 const Home = () => {
   const router = useRouter()
   useEffect(() => {
-    router.push("/bestMenu")
+    router.push("/product")
   }, [])
   return (
     <></>
