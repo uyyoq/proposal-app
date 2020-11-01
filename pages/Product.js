@@ -1,10 +1,16 @@
-import Navbar from "../components/Navbar/navbar"
+import Navbar, {penambahan} from "../components/Navbar/navbar"
+import { motion } from "framer-motion"
 
-const BestMenu = () => {
+
+const Product = () => {
+  
   return (
-    <div className="pt-24">
+    <div 
+    className="flex items-center pt-24 w-3/4 my-0 mx-auto "
+    >
       <Navbar />
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 self-center gap-6 items-center justify-items-center mx-4 md:mx-16 lg:mx-28">
+    
+      <div className="grid md:grid-cols-2  lg:grid-cols-3 self-center gap-6 items-center justify-items-center my-0 mx-auto">
         <div>
           <img className="w-auto h-auto" src="/bestMenu/bestmenu1.jpg" alt="bestMenu-img" />
         </div>
@@ -37,4 +43,4 @@ const BestMenu = () => {
   )
 }
 
-export default BestMenu
+export default Product
