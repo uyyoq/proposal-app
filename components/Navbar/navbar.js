@@ -12,11 +12,11 @@ const Navbar = () => {
             </div>
 
             <div className="hidden lg:flex my-auto">
-              <Link href="/product">
-                <a className="mx-8 text-red-600 hover:text-red-700 font-extrabold cursor-pointer">Product</a>
-              </Link>
               <Link href="/promotion">
                 <a className="text-red-600 hover:text-red-700 font-extrabold cursor-pointer">Promotion</a>
+              </Link>
+              <Link href="/product">
+                <a className="mx-8 text-red-600 hover:text-red-700 font-extrabold cursor-pointer">Product</a>
               </Link>
             </div>
           </div>
