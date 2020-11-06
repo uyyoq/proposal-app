@@ -1,84 +1,31 @@
-import { Formik, Field, Form, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
-
-const ContactSchema = Yup.object().shape({
-  name: Yup.string()
-    .min(2, 'Nama terlalu pendek')
-    .max(50, 'Nama terlalu panjang')
-    .required('Nama wajib diisi'),
-  email: Yup.string()
-    .email('Format email salah')
-    .required('Email wajib diisi'),
-  phoneNumber: Yup.string()
-    .min(4, 'Channel terlalu pendek')
-    .max(50, 'Channel terlalu panjang').required('Email wajib diisi'),
-});
-
-
-const initialValues = {
-  name: '',
-  email: '',
-  phoneNumber: ['', '']
-}
-
-
-const onSubmit = values => {
-  console.log("Form values", values);
-}
 
 const ContactForm = () => {
   return(
-    <div>
-      <Formik
-        initialValues={initialValues}
-        onSubmit={onSubmit}
-        validationSchema={ContactSchema}
-      >
+  <>
+    <form className="flex flex-col w-full">
 
-        {
-          ({ errors, touched }) =>
-            (
-              <Form>
-                <div className="form-control">
-                  <label htmlFor="name">Nama Lengkap</label>
-                  <Field
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Nama Lengkap Anda"
-                  />
-                  <ErrorMessage component="div" className="error" name="name" />
-                </div>
+      <div className="flex flex-col mx-auto my-1 ">
+        <label className="py-2 text-sm" for="name">Nama Lengkap</label>
+        <input className="shadow appearance-none border rounded w-full py-1 px-3 text-sm" id="name" type="text" placeholder="Nama Lengkap"></input>
+      </div>
 
-                <div className="form-control">
-                  <label htmlFor="email">E-mail</label>
-                  <Field
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="example@gmail.com"
-                  />
-                  <ErrorMessage component="div" className="error" name="email" />
-                </div>
+      <div className="flex flex-col mx-auto my-1">
+        <label className="py-2 text-sm" for="phone">No Handphone</label>
+        <input className="shadow appearance-none border rounded w-full py-1 px-3 text-sm" id="phone" type="text" placeholder="No Handphone"></input>
+      </div>
 
-                <div className="form-control">
-                  <label htmlFor="phoneNumber">Phone Number</label>
-                  <Field
-                    type="number"
-                    id="phoneNumber"
-                    name="phoneNumber"
-                    placeholder="+62"
-                  />
-                  <ErrorMessage component="div" className="error" name="phoneNumber" />
-                </div>
+      <div className="flex flex-col mx-auto my-1">
+        <label className="py-2 text-sm" for="email">Email</label>
+        <input className="shadow appearance-none border rounded w-full py-1 px-3 text-sm" id="email" type="text" placeholder="Email"></input>
+      </div>
 
-              <button type="submit"> Submit </button>
-              </Form>
-            )
-        }
-
-      </Formik>
-    </div>
+      <div className="flex flex-col mx-auto my-1">
+        <label className="py-2 text-sm" for="pesan">Pesan Anda</label>
+        <input className="shadow appearance-none border rounded w-full py-1 px-3 text-sm" id="pesan" type="textarea" placeholder="Pesan Anda"></input>
+      </div>
+      <button className="flex flex-col mx-auto bg-red-600 text-white font-bold rounded px-2 py-1 my-2 text-sm">Kirim Pesan</button>
+    </form>
+  </>
   )
 }
 

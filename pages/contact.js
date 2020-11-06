@@ -4,7 +4,6 @@ import ContactForm from "../components/Form/ContactForm/contactForm"
 const Contact = () => {
   return(
     <div>
-      <Navbar />
       <ContactForm />
     </div>
   )

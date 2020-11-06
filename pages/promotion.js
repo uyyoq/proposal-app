@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar/navbar"
 
 const Promotion = () => {
   return (
-    <div>
+    <div className="flex flex-col items-center pt-24 w-3/4 my-0 mx-auto">
       <Navbar />
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 self-center gap-6 items-center justify-items-center mx-4 md:mx-16 lg:mx-28">
