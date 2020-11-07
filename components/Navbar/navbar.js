@@ -7,13 +7,18 @@ const Navbar = () => {
 
         <div className="flex justify-between w-11/12 lg:w-3/4 mx-auto my-auto px-4hx">
           <div className="flex justify-start ml-0">
+            <Link href="/">
             <div className="flex lg:mx-0">
+              <a>
               <img src="/hisana-logo.svg" className="w-16 h-auto mx-auto cursor-pointer" />
+              </a>
             </div>
+            </Link>
+           
 
             <div className="hidden lg:flex my-auto">
-              <Link href="/promotion">
-                <a className="ml-8 text-red-600 hover:text-red-700 font-extrabold cursor-pointer">Promotion</a>
+              <Link href="/product">
+                <a className="ml-8 text-red-600 hover:text-red-700 font-extrabold cursor-pointer">Product</a>
               </Link>
               <Link href="/contact">
                 <a className="ml-8 text-red-600 hover:text-red-700 font-extrabold cursor-pointer">Contact</a>
