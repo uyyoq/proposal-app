@@ -4,10 +4,10 @@ import ContactForm from "../components/Form/ContactForm/contactForm"
 const Contact = () => {
   return (
     <div>
-      <div className="flex items-center my-0 mx-auto pt-16 items-start">
+      <div className="flex items-center my-0 mx-auto pt-16">
         <Navbar />
       </div>
-      <div>
+      <div className="w-3/4 mx-auto">
         <ContactForm />
       </div>
 
