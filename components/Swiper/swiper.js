@@ -7,7 +7,7 @@ const SwiperComp = () => {
   return (
     <div className="w-11/12 h-full flex justify-center item-center my-0 mx-0 px-6">
       <Swiper
-        spaceBetween={50}
+        spaceBetween={23}
         slidesPerView={3}
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}

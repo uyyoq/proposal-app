@@ -1,6 +1,39 @@
 import Navbar from "../components/Navbar/navbar"
+import React from "react"
+
+// import axios from "axios";
 
 const Home = () => {
+
+  // React.useEffect(() => {
+    
+
+  //   const newPost = {
+  //     name: "morpheus",
+  //     job: "leader",
+  //     id: "26",
+  //     createdAt: "2020-11-12T04:18:06.174Z"
+  //   };
+
+  //   const sendPostRequest = async () => {
+  //     try {
+  //       const res = await axios.post('https://reqres.in/api/users/2', newPost);
+        
+  //       if (res.status === 201 && res.data === "success") {
+          
+  //       }
+
+  //     } catch (err) {
+  //       // Handle Error Here
+  //       console.error(err);
+        
+  //     }
+  //   };
+
+  //   sendPostRequest();
+
+  // }, [])
+
   return (
     <div className="flex flex-col items-center pt-24 w-3/4 my-0 mx-auto">
       <Navbar />
