@@ -10,24 +10,34 @@ const SwiperComp = () => {
       <Swiper
         spaceBetween={23}
         slidesPerView={3}
+        mousewheel
+        scrollbar
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+          },
+          600: {
+            slidesPerView: 2,
+          },
+        }}
         onSwiper={(swiper) => console.log(swiper)}
       >
-        <SwiperSlide className="py-4 px-2">
+        <SwiperSlide className="py-8 px-2">
           <Card />
         </SwiperSlide>
-        <SwiperSlide className="py-4 px-2">
+        <SwiperSlide className="py-8 px-2">
           <Card />
         </SwiperSlide>
-        <SwiperSlide className="py-4 px-2">
+        <SwiperSlide className="py-8 px-2">
           <Card />
         </SwiperSlide>
-        <SwiperSlide className="py-4 px-2">
+        <SwiperSlide className="py-8 px-2">
           <Card />
         </SwiperSlide>
-        <SwiperSlide className="py-4 px-2">
+        <SwiperSlide className="py-8 px-2">
           <Card />
         </SwiperSlide>
-        <SwiperSlide className="py-4 px-2">
+        <SwiperSlide className="py-8 px-2">
           <Card />
         </SwiperSlide>
       </Swiper>
