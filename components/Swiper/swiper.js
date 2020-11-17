@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
+import Card from '../Card/card';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
@@ -9,32 +10,25 @@ const SwiperComp = () => {
       <Swiper
         spaceBetween={23}
         slidesPerView={3}
-        pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}
       >
-        <SwiperSlide className="">
-          <img className="w-64 h-full" src="/promotion/promotion1.jpg" />
+        <SwiperSlide className="py-4 px-2">
+          <Card />
         </SwiperSlide>
-        <SwiperSlide className="">
-          <img className="w-64 h-full" src="/promotion/promotion2.jpg" />
+        <SwiperSlide className="py-4 px-2">
+          <Card />
         </SwiperSlide>
-        <SwiperSlide className="">
-          <img className="w-64 h-full" src="/promotion/promotion3.jpg" />
+        <SwiperSlide className="py-4 px-2">
+          <Card />
         </SwiperSlide>
-        <SwiperSlide className="">
-          <img className="w-64 h-full" src="/promotion/promotion4.jpg" />
+        <SwiperSlide className="py-4 px-2">
+          <Card />
         </SwiperSlide>
-        <SwiperSlide className="">
-          <img className="w-64 h-full" src="/promotion/promotion5.jpg" />
+        <SwiperSlide className="py-4 px-2">
+          <Card />
         </SwiperSlide>
-        <SwiperSlide className="">
-          <img className="w-64 h-full" src="/promotion/promotion6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide className="">
-          <img className="w-64 h-full" src="/promotion/promotion7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide className="">
-          <img className="w-64 h-full" src="/promotion/promotion8.jpg" />
+        <SwiperSlide className="py-4 px-2">
+          <Card />
         </SwiperSlide>
       </Swiper>
     </div>

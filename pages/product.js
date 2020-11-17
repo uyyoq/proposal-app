@@ -34,7 +34,7 @@ const Product = () => {
         <div>
           <img className="w-auto h-auto" src="/bestMenu/bestmenu8.jpg" alt="bestMenu-img" />
         </div>
-        <div>
+        <div className="md:hidden lg:grid">
           <img className="w-auto h-auto" src="/bestMenu/bestmenu9.jpg" alt="bestMenu-img" />
         </div>
       </div>
