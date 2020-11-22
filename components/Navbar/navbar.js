@@ -21,6 +21,7 @@ const Navbar = () => {
               <Link href="/product">
                 <a className="ml-8 text-red-600 hover:text-red-700 font-extrabold cursor-pointer">Product</a>
               </Link>
+
               <Link href="/contact">
                 <a className="ml-8 text-red-600 hover:text-red-700 font-extrabold cursor-pointer">Contact</a>
               </Link>

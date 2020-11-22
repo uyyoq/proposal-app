@@ -10,6 +10,11 @@ module.exports = {
       'body': ['Open Sans'],
     },
   },
-  variants: {},
+  variants: {
+    extend: {
+      display: ['hover'],
+      divideColor: ['group-hover'],
+    }
+  },
   plugins: [],
 }
