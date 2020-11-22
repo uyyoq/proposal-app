@@ -26,12 +26,36 @@ const Navbar = () => {
                 <a className="ml-8 text-red-600 hover:text-red-700 font-extrabold cursor-pointer">Contact</a>
               </Link>
             </div>
+
+            {/* // Dropdown navbar menu */}
+            <div className="ml-8 mt-2">
+              <div className="dropdown inline-block relative cursor-pointer">
+                <button className="text-red-600 hover:text-red-700 font-extrabold inline-flex">Dropdown</button>
+                <ul className="dropdown-menu absolute hidden text-red-600 pt-1">
+                  <li><a className="rounded-t bg-white hover:text-red-700 py-2 px-4 block whitespace-no-wrap" >Menu 1</a></li>
+                  <li><a className="bg-white hover:text-red-700 py-2 px-4 block whitespace-no-wrap" >Menu 2</a></li>
+                </ul>
+              </div>
+            </div>
+
           </div>
 
           <div className="my-auto flex lg:hidden ">
             <img src="/menu.svg" className="w-auto h-6 cursor-pointer" />
           </div>
         </div>
+
+        <style jsx>
+          {
+            `
+          .dropdown:hover .dropdown-menu {
+            display: block;
+          }
+          `
+          }
+
+        </style>
+
       </nav>
     </div>
 
