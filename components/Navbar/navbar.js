@@ -25,15 +25,20 @@ const Navbar = () => {
               <Link href="/contact">
                 <a className="ml-8 text-red-600 hover:text-red-700 font-extrabold cursor-pointer">Contact</a>
               </Link>
+
+              <Link href="/chart">
+                <a className="ml-8 text-red-600 hover:text-red-700 font-extrabold cursor-pointer">Chart</a>
+              </Link>
             </div>
 
+            
             {/* // Dropdown navbar menu */}
-            <div className="ml-8 mt-2">
+            <div className=" hidden lg:flex my-auto ml-8">
               <div className="dropdown inline-block relative cursor-pointer">
                 <button className="text-red-600 hover:text-red-700 font-extrabold inline-flex">Dropdown</button>
                 <ul className="dropdown-menu absolute hidden text-red-600  shadow-2xl pt-1 bg-white">
-                  <li><a className="rounded-t hover:text-red-700 py-2 px-4 hover:font-semibold hover: block whitespace-no-wrap" >Menu 1</a></li>
-                  <li><a className=" hover:text-red-700 py-2 px-4 block hover:font-semibold hover: whitespace-no-wrap" >Menu 2</a></li>
+                  <li><a className="rounded-t py-2 px-4 hover:font-semibold hover: block whitespace-no-wrap" >Menu 1</a></li>
+                  <li><a className=" py-2 px-4 block hover:font-semibold hover: whitespace-no-wrap" >Menu 2</a></li>
                 </ul>
               </div>
             </div>

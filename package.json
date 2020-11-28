@@ -19,6 +19,7 @@
     "sass": "^1.28.0",
     "swiper": "^6.3.5",
     "tailwindcss": "^1.9.6",
+    "victory": "^35.4.0",
     "yup": "^0.29.3"
   },
   "devDependencies": {
