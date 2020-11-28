@@ -5,7 +5,7 @@ const Product = () => {
 
   return (
     <div
-      className="flex flex-col items-center pt-24 w-3/4 my-0 mx-auto">
+      className="flex flex-col items-center pt-16 w-3/4 my-0 mx-auto pb-8">
       <Navbar />
       <SwiperComp />
 
