@@ -1,17 +1,18 @@
+import Link from 'next/link'
+
+
 const Nivbir = () => {
   return (
 
     <body>
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="flex w-full">
         <nav className="nav flex flex-wrap items-center justify-between px-4">
-          <div
-            className="flex flex-no-shrink items-center mr-6 py-3 text-grey-darkest"
-          >
+        
+          <div className="flex flex-no-shrink items-center mr-6 py-3 text-grey-darkest">
             <img src="/hisana-logo.svg" className="fill-current h-8 mr-2 w-" />
-            <span className="font-semibold text-xl tracking-tight">Luke Bennett</span>
           </div>
 
-          <input className="menu-btn hidden" type="checkbox" id="menu-btn" />
+          {/* <input className="menu-btn hidden" type="checkbox" id="menu-btn" />
           <label
             className="menu-icon block cursor-pointer md:hidden px-2 py-4 relative select-none"
             for="menu-btn"
@@ -19,35 +20,29 @@ const Nivbir = () => {
             <span
               className="navicon bg-grey-darkest flex items-center relative"
             ></span>
-          </label>
+          </label> */}
 
-          <ul
+          <div
             className="menu border-b md:border-none flex justify-end list-reset m-0 w-full md:w-auto"
           >
-            <li className="border-t md:border-none">
-              <a
-                href="/"
-                className="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker font-bold"
-              >Home</a
-              >
-            </li>
+            <div className="border-t md:border-none">
+                <Link href="/product">
+                <a className="ml-8 text-red-600 hover:text-red-700 font-extrabold cursor-pointer">Product</a>
+              </Link>
+            </div>
 
-            <li className="border-t md:border-none">
-              <a
-                href="/about/"
-                className="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker"
-              >About</a
-              >
-            </li>
+            <div className="border-t md:border-none">
+            <Link href="/contact">
+                <a className="ml-8 text-red-600 hover:text-red-700 font-extrabold cursor-pointer">Contact</a>
+              </Link>
+            </div>
 
-            <li className="border-t md:border-none">
-              <a
-                href="/blog/"
-                className="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker"
-              >Blog</a
-              >
-            </li>
-          </ul>
+            <div className="border-t md:border-none">
+              <Link href="/chart">
+                <a className="ml-8 text-red-600 hover:text-red-700 font-extrabold cursor-pointer">Chart</a>
+              </Link>
+            </div>
+          </div>
         </nav>
       </div>
 
