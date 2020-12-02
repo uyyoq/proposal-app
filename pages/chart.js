@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
 } from 'recharts';
-import Nivbir from "../components/Navbar/nivbir";
-// import Navbar from "../components/Navbar/navbar";
+import Navbar from "../components/Navbar/navbar";
 
 const data = [
   {
@@ -44,12 +43,17 @@ const data = [
   },
 ];
 
-const Chart = () => {
+const Chart = (props) => {
+  const [navbar, setnavbar] = useState(true)
+
+  const handleNavbar = () => {
+    setnavbar(!navbar);
+  }
   return (
     <>
-    <Nivbir />
-      <p className="pt-24 text-center font-bold text-lg text-red-600 bg-orange-300">Data Penjulan</p>
-      {/* <div style={{ width: 600, height: 400 }} className="flex justify-center pt-8 ml-16 md:ml-32 lg:ml-64 right-0">
+      <Navbar/>
+      <p className="pt-24 text-center font-bold text-lg text-red-600 ">Data Penjulan</p>
+      <div style={{ width: 600, height: 400 }} className="flex justify-center pt-8 ml-16 md:ml-32 lg:ml-64 right-0">
         <ResponsiveContainer>
           <LineChart
             width={800}
@@ -70,7 +74,7 @@ const Chart = () => {
             <Line type="monotone" dataKey="hottang" stroke="#00FF00" />
           </LineChart>
         </ResponsiveContainer>
-      </div> */}
+      </div>
 
     </>
 
