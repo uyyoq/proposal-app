@@ -18,12 +18,12 @@ const Navbar = () => {
               </div>
             </Link>
 
-            <div className="hidden lg:flex my-auto">
+            <div className="hidden md:flex my-auto">
               <Link href="/product">
                 <a className="ml-8 text-red-600 hover:text-red-700 font-extrabold cursor-pointer">Product</a>
               </Link>
 
-              <Link href="/contact">
+              <Link href="/ ">
                 <a className="ml-8 text-red-600 hover:text-red-700 font-extrabold cursor-pointer">Contact</a>
               </Link>
 
@@ -33,7 +33,7 @@ const Navbar = () => {
             </div>
 
             {/* // Dropdown navbar menu */}
-            <div className=" hidden lg:flex my-auto ml-8">
+            <div className=" hidden md:flex my-auto ml-8">
               <div className="dropdown inline-block relative cursor-pointer">
                 <button className="text-red-600 hover:text-red-700 font-extrabold inline-flex">Dropdown</button>
                 <ul className="dropdown-menu absolute hidden text-red-600  shadow-2xl pt-1 bg-white">
@@ -53,6 +53,7 @@ const Navbar = () => {
             `
           .dropdown:hover .dropdown-menu {
             display: block;
+            
           }
           `
           }
