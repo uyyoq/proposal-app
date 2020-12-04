@@ -14,6 +14,7 @@ module.exports = {
     extend: {
       display: ['hover'],
       divideColor: ['group-hover'],
+      borderCollapse: ['hover', 'focus'],
     }
   },
   plugins: [],

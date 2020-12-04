@@ -1,10 +1,14 @@
 import Link from 'next/link'
 
 
-const List = () => {
+const List = (props) => {
   return (
     <div>
-      <div className="flex flex-col items-center py-4 absolute bg-white left-0 w-full z-50 list md:hidden">
+      <div className="my-auto flex justify-end mx-16 px-1 pt-6" >
+        <img src="/cancel.svg" className="w-auto h-5 cursor-pointer md:hidden" onClick={props.onClicked} />
+      </div>
+
+      <div className="flex flex-col items-center py-8 absolute bg-white left-0 w-full z-50 md:hidden">
         <Link href="/product">
           <a className="text-red-600 hover:text-red-700 font-extrabold cursor-pointer ">Product</a>
         </Link>
