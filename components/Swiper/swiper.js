@@ -36,7 +36,7 @@ const SwiperComp = () => {
       </Swiper>
       <Swiper
         className="block md:hidden"
-        spaceBetween={23}
+        spaceBetween={20}
         slidesPerView={1}
         mousewheel
         scrollbar
