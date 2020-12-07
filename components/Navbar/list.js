@@ -8,7 +8,7 @@ const List = (props) => {
         <img src="/cancel.svg" className="w-auto h-5 cursor-pointer md:hidden" onClick={props.onClicked} />
       </div>
 
-      <div className="flex flex-col items-center py-8 absolute bg-white left-0 w-full z-50 md:hidden">
+      <div className="flex flex-col items-center py-8 absolute bg-white left-0 w-full font-padauk z-50 md:hidden">
         <Link href="/product">
           <a className="text-red-600 hover:text-red-700 font-extrabold cursor-pointer ">Product</a>
         </Link>

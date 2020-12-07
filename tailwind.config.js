@@ -5,6 +5,8 @@ module.exports = {
       'sans': ['Open Sans', 'Lato', 'Arial', 'sans-serif'
       ],
       'serif': ['Georgia', 'Cambria'],
+      'padauk':['padauk'],
+      'roboto':['roboto'],
       'mono': ['SFMono-Regular', 'Menlo'],
       'display': ['Oswald'],
       'body': ['Open Sans'],

@@ -18,24 +18,24 @@ const Navbar = () => {
               </div>
             </Link>
 
-            <div className="hidden md:flex my-auto">
+            <div className="hidden md:flex my-auto borders line font-padauk">
               <Link href="/product">
-                <a className="ml-8 text-red-600 hover:text-red-700 font-extrabold cursor-pointer">Product</a>
+                <a className="ml-8 text-red-600 borders line p-1 font-extrabold cursor-pointer">Product</a>
               </Link>
 
-              <Link href="/contact">
-                <a className="ml-8 text-red-600 hover:text-red-700 font-extrabold cursor-pointer">Contact</a>
+              <Link href="/ ">
+                <a className="ml-8 text-red-600 borders line p-1 font-extrabold cursor-pointer">Contact</a>
               </Link>
 
               <Link href="/chart">
-                <a className="ml-8 text-red-600 hover:text-red-700 font-extrabold cursor-pointer">Chart</a>
+                <a className="ml-8 text-red-600 borders line p-1 font-extrabold cursor-pointer">Info</a>
               </Link>
             </div>
 
             {/* // Dropdown navbar menu */}
             {/* <div className=" hidden md:flex my-auto ml-8">
               <div className="dropdown inline-block relative cursor-pointer">
-                <button className="text-red-600 hover:text-red-700 font-extrabold inline-flex">Dropdown</button>
+                <button className="text-red-600 hover:text-red-800 font-extrabold inline-flex">Dropdown</button>
                 <ul className="dropdown-menu absolute hidden text-red-600  shadow-2xl pt-1 bg-white">
                   <li><a className="rounded-t py-2 px-4 hover:font-semibold hover: block whitespace-no-wrap" >Menu 1</a></li>
                   <li><a className=" py-2 px-4 block hover:font-semibold hover: whitespace-no-wrap" >Menu 2</a></li>
@@ -53,8 +53,18 @@ const Navbar = () => {
             `
           .dropdown:hover .dropdown-menu {
             display: block;
-            
           }
+          .borders {
+            border-bottom: 2px solid transparent;
+            border-top: 2px solid transparent;
+
+          }
+          .line .line:hover {
+           border-bottom: 2px solid red;
+           border-top: 2px solid red;
+           transition: all .3s;
+         }
+            
           `
           }
 

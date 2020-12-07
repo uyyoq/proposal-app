@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar/navbar"
 import React from "react"
 import { motion } from "framer-motion"
+import Content from "../components/content/content"
 
 // import axios from "axios";
 
@@ -37,13 +38,16 @@ const Home = () => {
   // }, [])
 
   return (
-    <div className="flex flex-col items-center pt-24 w-3/4 my-0 mx-auto pb-8">
+    <div className="flex flex-col items-center pt-24 w-3/4 mx-auto pb-4">
       <Navbar />
-      <motion.h1
+
+        <Content />
+      
+      {/* <motion.h1
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, color: "red" }}
         transition={{ delay: 0.2 }}
-        className="mx-auto text-center font-bold p-4">Enak,Lezat,Bergizi</motion.h1>
+        className="mx-auto text-center font-bold p-4">Enak,Lezat,Bergizi</motion.h1> */}
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 self-center gap-6 items-center justify-items-center mx-4 md:mx-16 lg:mx-28">
         <div>
