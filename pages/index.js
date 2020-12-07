@@ -51,31 +51,58 @@ const Home = () => {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 self-center gap-6 items-center justify-items-center mx-4 md:mx-16 lg:mx-28">
         <div>
-          <img className="w-auto h-auto" src="/promotion/promotion1.jpg" />
+          <motion.img  
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }} 
+          className="w-auto h-auto" src="/promotion/promotion1.jpg" />
         </div>
         <div>
-          <img className="w-auto h-auto" src="/promotion/promotion2.jpg" />
+          <motion.img  
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }} 
+          className="w-auto h-auto" src="/promotion/promotion2.jpg" />
         </div>
         <div>
-          <img className="w-auto h-auto" src="/promotion/promotion3.jpg" />
+          <motion.img  
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }} 
+          className="w-auto h-auto" src="/promotion/promotion3.jpg" />
         </div>
         <div>
-          <img className="w-auto h-auto" src="/promotion/promotion4.jpg" />
+          <motion.img  
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }} 
+          className="w-auto h-auto" src="/promotion/promotion4.jpg" />
         </div>
         <div>
-          <img className="w-auto h-auto" src="/promotion/promotion5.jpg" />
+          <motion.img  
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }} 
+          className="w-auto h-auto" src="/promotion/promotion5.jpg" />
+          </div>
+        <div>
+          <motion.img  
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }} 
+          className="w-auto h-auto" src="/promotion/promotion6.jpg" />
         </div>
         <div>
-          <img className="w-auto h-auto" src="/promotion/promotion6.jpg" />
+          <motion.img  
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }} 
+          className="w-auto h-auto" src="/promotion/promotion7.jpg" />
         </div>
         <div>
-          <img className="w-auto h-auto" src="/promotion/promotion7.jpg" />
-        </div>
-        <div>
-          <img className="w-auto h-auto" src="/promotion/promotion8.jpg" />
+          <motion.img  
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }} 
+          className="w-auto h-auto" src="/promotion/promotion8.jpg" />
         </div>
         <div className="md:hidden lg:grid">
-          <img className="w-auto h-auto" src="/promotion/promotion9.jpg" />
+          <motion.img  
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }} 
+          className="w-auto h-auto" src="/promotion/promotion9.jpg" />
         </div>
       </div>
     </div >

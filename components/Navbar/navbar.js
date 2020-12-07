@@ -23,7 +23,7 @@ const Navbar = () => {
                 <a className="ml-8 text-red-600 borders line p-1 font-extrabold cursor-pointer">Product</a>
               </Link>
 
-              <Link href="/ ">
+              <Link href="/contact">
                 <a className="ml-8 text-red-600 borders line p-1 font-extrabold cursor-pointer">Contact</a>
               </Link>
 
