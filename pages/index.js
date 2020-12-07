@@ -1,12 +1,13 @@
 import Navbar from "../components/Navbar/navbar"
 import React from "react"
+import { motion } from "framer-motion"
 
 // import axios from "axios";
 
 const Home = () => {
 
   // React.useEffect(() => {
-    
+
 
   //   const newPost = {
   //     name: "morpheus",
@@ -18,16 +19,17 @@ const Home = () => {
   //   const sendPostRequest = async () => {
   //     try {
   //       const res = await axios.post('https://reqres.in/api/users/2', newPost);
-        
+
   //       if (res.status === 201 && res.data === "success") {
-          
+
   //       }
 
   //     } catch (err) {
   //       // Handle Error Here
   //       console.error(err);
-        
+
   //     }
+
   //   };
 
   //   sendPostRequest();
@@ -37,6 +39,11 @@ const Home = () => {
   return (
     <div className="flex flex-col items-center pt-24 w-3/4 my-0 mx-auto pb-8">
       <Navbar />
+      <motion.h1
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, color: "red" }}
+        transition={{ delay: 0.2 }}
+        className="mx-auto text-center font-bold p-4">Enak,Lezat,Bergizi</motion.h1>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 self-center gap-6 items-center justify-items-center mx-4 md:mx-16 lg:mx-28">
         <div>
@@ -67,7 +74,7 @@ const Home = () => {
           <img className="w-auto h-auto" src="/promotion/promotion9.jpg" />
         </div>
       </div>
-    </div>
+    </div >
 
   )
 

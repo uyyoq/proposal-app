@@ -33,7 +33,7 @@ const Navbar = () => {
             </div>
 
             {/* // Dropdown navbar menu */}
-            <div className=" hidden md:flex my-auto ml-8">
+            {/* <div className=" hidden md:flex my-auto ml-8">
               <div className="dropdown inline-block relative cursor-pointer">
                 <button className="text-red-600 hover:text-red-700 font-extrabold inline-flex">Dropdown</button>
                 <ul className="dropdown-menu absolute hidden text-red-600  shadow-2xl pt-1 bg-white">
@@ -41,7 +41,7 @@ const Navbar = () => {
                   <li><a className=" py-2 px-4 block hover:font-semibold hover: whitespace-no-wrap" >Menu 2</a></li>
                 </ul>
               </div>
-            </div>
+            </div> */}
 
           </div>
 
