@@ -28,7 +28,7 @@ const Navbar = () => {
               </Link>
 
               <Link href="/chart">
-                <a className="ml-8 text-red-600 borders line p-1 font-extrabold cursor-pointer">Info</a>
+                <a className="ml-8 text-red-600 borders line p-1 font-extrabold cursor-pointer">Chart</a>
               </Link>
             </div>
 
