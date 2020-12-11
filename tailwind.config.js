@@ -7,6 +7,7 @@ module.exports = {
       'serif': ['Georgia', 'Cambria'],
       'padauk':['padauk'],
       'roboto':['roboto'],
+      'poppins':['poppins'],
       'staatliches': ['staatliches'],
       'mono': ['SFMono-Regular', 'Menlo'],
       'display': ['Oswald'],

@@ -33,7 +33,7 @@ const ContactForm = () => {
   })
 
   return (
-    <div className="flex w-full md:w-1/2 lg:w-1/2 mx-auto">
+    <div className="flex w-full md:w-1/2 lg:w-1/2 mx-auto text-red-600">
       <form onSubmit={formik.handleSubmit} className="flex flex-col w-full">
 
         <div className="flex flex-col mx-auto my-3 w-full">
