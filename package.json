@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "commit": "cz"
   },
   "dependencies": {
     "axios": "^0.21.0",
@@ -29,8 +30,15 @@
     "@fullhuman/postcss-purgecss": "^3.0.0",
     "autoprefixer": "^10.3.0",
     "babel-plugin-styled-components": "1.10.6",
+    "cz-conventional-changelog": "^3.3.0",
+    "git-cz": "^4.7.6",
     "postcss-flexbugs-fixes": "4.2.1",
     "postcss-preset-env": "^6.7.0",
     "tailwindcss": "^2.2.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

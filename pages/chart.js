@@ -44,7 +44,6 @@ const Chart = () => {
 
 return (
   <>
-  <Navbar />
     <p className="hidden md:block pt-24 text-center font-padauk md:pr-10 font-bold text-lg text-red-600 ">Data Penjulan</p>
     <div style={{ width: 600, height: 400 }} className="flex justify-center mt-24 md:mt-8 ml-16 md:ml-32 lg:ml-64 right-0">
       <ResponsiveContainer>
