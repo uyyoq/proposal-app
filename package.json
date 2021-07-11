@@ -23,12 +23,14 @@
     "sass": "^1.28.0",
     "swiper": "^6.3.5",
     "victory": "^35.4.0",
+    "yarn": "^1.22.10",
     "yup": "^0.29.3"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^3.0.0",
     "autoprefixer": "^10.3.0",
     "babel-plugin-styled-components": "1.10.6",
+    "git-cz": "^4.7.6",
     "postcss-flexbugs-fixes": "4.2.1",
     "postcss-preset-env": "^6.7.0",
     "tailwindcss": "^2.2.4"

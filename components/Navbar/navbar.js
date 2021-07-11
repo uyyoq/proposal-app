@@ -30,6 +30,18 @@ const Navbar = () => {
               <Link href="/chart">
                 <a className="ml-8 text-red-600 borders line p-1 font-extrabold cursor-pointer">Chart</a>
               </Link>
+
+              <Link href="/covid-19">
+                <a className="ml-8 flex text-red-600 borders line p-1 font-extrabold cursor-pointer ">
+                  Covid-19
+                  <div className="flex ml-1">
+                    <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                  </div>
+
+                </a>
+              </Link>
+
             </div>
 
             {/* // Dropdown navbar menu */}
@@ -64,6 +76,16 @@ const Navbar = () => {
            border-top: 2px solid red;
            transition: all .3s;
          }
+
+          .animate-ping {
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+
+            @keyframes ping {
+              75%, 100% {
+                transform: scale(2);
+                opacity: 0;
+              }
+            }
             
           `
           }
