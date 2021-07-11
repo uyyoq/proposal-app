@@ -4,7 +4,7 @@ import Link from 'next/link'
 const List = (props) => {
   return (
     <div>
-      <div className="my-auto flex justify-end mx-16 px-1 pt-6" >
+      <div className="my-auto flex justify-end mx-16 px-1 pt-6 " >
         <img src="/cancel.svg" className="w-auto h-5 cursor-pointer md:hidden" onClick={props.onClicked} />
       </div>
 

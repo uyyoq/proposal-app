@@ -4,10 +4,10 @@ import NavMobile from './navMobile'
 const Navbar = () => {
 
   return (
-    <div className="flex w-full relative">
+    <div className="flex w-full">
       <nav className="fixed mx-auto shadow top-0 right-0 inset-x-auto z-10 w-full py-4 bg-white">
 
-        <div className="flex justify-between w-9/12 md:w-8/12 mx-auto my-auto px-4 md:px-8 lg:px-4">
+        <div className="flex justify-between w-full lg:w-9/12 mx-auto my-auto px-4 md:px-8 lg:px-4">
           <div className="flex justify-start ml-0">
 
             <Link href="/">

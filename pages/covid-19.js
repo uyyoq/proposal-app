@@ -6,11 +6,12 @@ const Covid19 = () => {
       <div className="flex w-full items-center my-0 mx-auto" >
         <Navbar />
       </div>
-     <div>
-       <div></div>
-       <div></div>
-       <div></div>
-       <div></div>
+     <div className="flex">
+       <div className=""></div>
+       <div className=""></div>
+       <div className=""></div>
+       <div className=""></div>
+      
      </div>
     </div>
   )
