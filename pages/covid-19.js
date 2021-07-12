@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const mati = "/icon/mati.svg";
 const dirawat = "/icon/dirawat.svg";
@@ -13,11 +13,20 @@ const data = [
   },
   {
     judul: "Positif",
-    jumlah: "12122",
+    jumlah: "12123252",
     img: positif,
   },
+  {
+    judul: "Sembuh",
+    jumlah: "32217672",
+    img: sembuh,
+  },
+  {
+    judul: "Dirawat",
+    jumlah: "9657432",
+    img: dirawat,
+  },
 
-  // ..... dan seterusnya
 ];
 
 const Card = ({ judul, jumlah, img }) => {
@@ -33,15 +42,28 @@ const Card = ({ judul, jumlah, img }) => {
 };
 
 const Covid19 = () => {
+  const [data, setData] = useState([])
+
+  const getCovid = () => {
+    fetch("https://covid19.mathdro.id/api")
+      .then(res => res.json())
+      .then(data => console.log(data))
+      .catch(error => console.log(error));
+  } 
+
+  useEffect(() => {
+    getCovid()
+  }, []);
+
   return (
     <React.Fragment>
       <h1 className="font-bold text-lg mt-5 text-yellow-500">
         Indonesia Corona Live Data
       </h1>
 
-      <div className="flex flex-wrap mt-10 gap-x-3 gap-y-3">
+      <div className="flex flex-wrap justify-center mt-10 gap-x-3 gap-y-3">
         {data.map((x, i) => {
-          return <Card key={i} jumlah={x.jumlah} judul={x.judul} img={x.img} />;
+          return <Card key={i} jumlah={Number(x.jumlah).toLocaleString()} judul={x.judul} img={x.img} />;
         })}
       </div>
 
