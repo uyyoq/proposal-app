@@ -42,17 +42,32 @@ const Card = ({ judul, jumlah, img }) => {
 };
 
 const Covid19 = () => {
-  const [data, setData] = useState([])
+  const [confirmed, setConfirmed] = useState([])
 
-  const getCovid = () => {
-    fetch("https://covid19.mathdro.id/api")
-      .then(res => res.json())
-      .then(data => console.log(data))
-      .catch(error => console.log(error));
-  } 
+  const getDataCovid = async () => {
+    try {
+      const res = await fetch("https://covid19.mathdro.id/api");
+
+      const data = await res.json();
+
+      console.log("datanya",data.confirmed)
+
+      // kalau ok kita set datanya
+      if (res.ok) {
+        setConfirmed(data?.confirmed);
+      }
+
+      if (!res.ok) {
+        throw "error bos";
+      }
+    } catch (error) {
+      // handle error
+      console.log("errornya", error);
+    }
+  };
 
   useEffect(() => {
-    getCovid()
+    getDataCovid()
   }, []);
 
   return (
@@ -63,7 +78,7 @@ const Covid19 = () => {
 
       <div className="flex flex-wrap justify-center mt-10 gap-x-3 gap-y-3">
         {data.map((x, i) => {
-          return <Card key={i} jumlah={Number(x.jumlah).toLocaleString()} judul={x.judul} img={x.img} />;
+          return <Card key={i} jumlah={Number(x.confirmed).toLocaleString()} judul={x.judul} img={x.img} />;
         })}
       </div>
 
