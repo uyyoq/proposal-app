@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useQuery } from "react-query";
-import { ReactQueryDevtools } from 'react-query-devtools';
+import { ReactQueryDevtools } from "react-query-devtools";
 import Card from "../components/CovidCard/covidCard";
 
 const mati = "/icon/mati.svg";
@@ -8,19 +8,23 @@ const positif = "/icon/positif.svg";
 const sembuh = "/icon/sembuh.svg";
 
 const getCovid = async () => {
-  const res = await fetch('https://covid19.mathdro.id/api');
+  const res = await fetch("https://covid19.mathdro.id/api");
 
   if (!res.ok) {
     throw new Error("fetching error");
   }
 
-  return await res.json()
-}
-
+  return await res.json();
+};
 
 const Covid19 = () => {
-
-  const { data, isError, isLoading, isFetching, isSuccess, } = useQuery("covid", getCovid);
+  const {
+    data: dataCovid,
+    isError,
+    isLoading,
+    isFetching,
+    isSuccess,
+  } = useQuery("covid", getCovid);
 
   // const [confirmed, setConfirmed] = useState([])
   // const [deaths, setDeaths] = useState([])
@@ -58,16 +62,27 @@ const Covid19 = () => {
         Indonesia Corona Live Data
       </h1>
 
-      {
-        data.map(x => (
-          <div className="flex flex-wrap justify-center mt-10 gap-x-3 gap-y-3">
-            <Card jumlah={Number(x.confirmed.value).toLocaleString()} judul="Positif" img={positif} />
-            <Card jumlah={Number(x.deaths.value).toLocaleString()} judul="meninggal" img={mati} />
-            <Card jumlah={Number(x.recovered.value).toLocaleString()} judul="sembuh" img={sembuh} />
-          </div>
+      {isLoading && <p>Loading....</p>}
 
-        ) )
-      }
+      {isSuccess && (
+        <div className="flex flex-wrap justify-center mt-10 gap-x-3 gap-y-3">
+          <Card
+            jumlah={Number(dataCovid?.confirmed?.value).toLocaleString()}
+            judul="Positif"
+            img={positif}
+          />
+          <Card
+            jumlah={Number(dataCovid?.deaths?.value).toLocaleString()}
+            judul="meninggal"
+            img={mati}
+          />
+          <Card
+            jumlah={Number(dataCovid?.recovered?.value).toLocaleString()}
+            judul="sembuh"
+            img={sembuh}
+          />
+        </div>
+      )}
 
       <ReactQueryDevtools initialIsOpen={false} />
     </React.Fragment>
