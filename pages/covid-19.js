@@ -58,7 +58,7 @@ const Covid19 = () => {
         Indonesia Corona Live Data
       </h1>
 
-      {
+      {/* {
         data.map(x => (
           <div className="flex flex-wrap justify-center mt-10 gap-x-3 gap-y-3">
             <Card jumlah={Number(x.confirmed.value).toLocaleString()} judul="Positif" img={positif} />
@@ -67,7 +67,7 @@ const Covid19 = () => {
           </div>
 
         ) )
-      }
+      } */}
 
       <ReactQueryDevtools initialIsOpen={false} />
     </React.Fragment>
