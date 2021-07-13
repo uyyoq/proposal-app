@@ -59,13 +59,14 @@ const Covid19 = () => {
       </h1>
 
       {
-        data.map(x =>
+        data.map(x => (
           <div className="flex flex-wrap justify-center mt-10 gap-x-3 gap-y-3">
-            <Card jumlah={Number(x.confirmed).toLocaleString()} judul="Positif" img={positif} />
-            <Card jumlah={Number(x.deaths).toLocaleString()} judul="meninggal" img={mati} />
-            <Card jumlah={Number(x.recovered).toLocaleString()} judul="sembuh" img={sembuh} />
+            <Card jumlah={Number(x.confirmed.value).toLocaleString()} judul="Positif" img={positif} />
+            <Card jumlah={Number(x.deaths.value).toLocaleString()} judul="meninggal" img={mati} />
+            <Card jumlah={Number(x.recovered.value).toLocaleString()} judul="sembuh" img={sembuh} />
           </div>
-       )
+
+        ) )
       }
 
       <ReactQueryDevtools initialIsOpen={false} />
