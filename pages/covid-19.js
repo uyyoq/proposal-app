@@ -1,74 +1,56 @@
 import React, { useEffect, useState } from "react";
+import { useQuery } from "react-query";
+import { ReactQueryDevtools } from 'react-query-devtools';
+import Card from "../components/CovidCard/covidCard";
 
 const mati = "/icon/mati.svg";
-const dirawat = "/icon/dirawat.svg";
 const positif = "/icon/positif.svg";
 const sembuh = "/icon/sembuh.svg";
 
-const data = [
-  {
-    judul: "Meninggal",
-    jumlah: "12121222",
-    img: mati,
-  },
-  {
-    judul: "Positif",
-    jumlah: "12123252",
-    img: positif,
-  },
-  {
-    judul: "Sembuh",
-    jumlah: "32217672",
-    img: sembuh,
-  },
-  {
-    judul: "Dirawat",
-    jumlah: "9657432",
-    img: dirawat,
-  },
+const getCovid = async () => {
+  const res = await fetch('https://covid19.mathdro.id/api');
 
-];
+  if (!res.ok) {
+    throw new Error("fetching error");
+  }
 
-const Card = ({ judul, jumlah, img }) => {
-  return (
-    <div className="flex flex-col w-32 h-32 border-2 border-red-500 py-2 px-2 rounded-md items-center">
-      <p className="font-bold text-sm text-red-500">{judul}</p>
-      <img src={img} alt={judul} className="h-10 w-10 my-2"></img>
-      <div>
-        <p className="font-bold text-sm text-red-500">{jumlah}</p>
-      </div>
-    </div>
-  );
-};
+  return await res.json()
+}
+
 
 const Covid19 = () => {
-  const [confirmed, setConfirmed] = useState([])
 
-  const getDataCovid = async () => {
-    try {
-      const res = await fetch("https://covid19.mathdro.id/api");
+  const { data, isError, isLoading, isFetching, isSuccess, } = useQuery("covid", getCovid);
 
-      const data = await res.json();
+  // const [confirmed, setConfirmed] = useState([])
+  // const [deaths, setDeaths] = useState([])
+  // const [recovered, setRecovered] = useState([])
 
-      console.log("datanya",data.confirmed)
+  // const getDataCovid = async () => {
+  //   try {
+  //     const res = await fetch("https://covid19.mathdro.id/api");
+  //     const data = await res.json();
+  //     console.log("datanya", data)
 
-      // kalau ok kita set datanya
-      if (res.ok) {
-        setConfirmed(data?.confirmed);
-      }
+  //     // kalau ok kita set datanya
+  //     if (res.ok) {
+  //       setConfirmed(data.confirmed.value);
+  //       setDeaths(data.deaths.value);
+  //       setRecovered(data.recovered.value);
+  //     }
 
-      if (!res.ok) {
-        throw "error bos";
-      }
-    } catch (error) {
-      // handle error
-      console.log("errornya", error);
-    }
-  };
+  //     if (!res.ok) {
+  //       throw "error bos";
+  //     }
+  //   } catch (error) {
+  //     // handle error
+  //     console.log("errornya", error);
+  //   }
+  // };
 
-  useEffect(() => {
-    getDataCovid()
-  }, []);
+  // useEffect(() => {
+  //   getDataCovid()
+  // }, []);
 
   return (
     <React.Fragment>
@@ -76,13 +58,17 @@ const Covid19 = () => {
         Indonesia Corona Live Data
       </h1>
 
-      <div className="flex flex-wrap justify-center mt-10 gap-x-3 gap-y-3">
-        {data.map((x, i) => {
-          return <Card key={i} jumlah={Number(x.confirmed).toLocaleString()} judul={x.judul} img={x.img} />;
-        })}
-      </div>
+      {
+        data.map(x =>
+          <div className="flex flex-wrap justify-center mt-10 gap-x-3 gap-y-3">
+            <Card jumlah={Number(x.confirmed).toLocaleString()} judul="Positif" img={positif} />
+            <Card jumlah={Number(x.deaths).toLocaleString()} judul="meninggal" img={mati} />
+            <Card jumlah={Number(x.recovered).toLocaleString()} judul="sembuh" img={sembuh} />
+          </div>
+       )
+      }
 
-      <p className="text-sm mt-3 text-gray-600">Update terakhir:</p>
+      <ReactQueryDevtools initialIsOpen={false} />
     </React.Fragment>
   );
 };

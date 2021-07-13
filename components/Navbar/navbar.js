@@ -73,7 +73,6 @@ const Navbar = () => {
           }
           .line .line:hover {
            border-bottom: 2px solid red;
-           border-top: 2px solid red;
            transition: all .3s;
          }
 
