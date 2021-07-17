@@ -41,9 +41,7 @@ const FormText = () => {
             type="email"
             name="email"
             {...register("email", {
-              required: "Email Wajib Diisi!",
-              pattern:
-                /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+              required: true,
             })}
           />
           {errors.email && (
@@ -62,32 +60,11 @@ const FormText = () => {
             className="shadow appearance-none border rounded py-1 px-3 text-sm focus:outline-none focus:border-orange-300 w-full "
             type="tel"
             name="phone"
-            {...register("phone", {
-              required: "No Hp Wajib Diisi!",
-              maxLength: 13,
-              minLength: 10,
-              pattern:
-                /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/,
-            })}
+            {...register("phone", {required: true})}
           />
-          {errors.phone?.type === "pattern" && (
+          {errors.phone && (
             <p className="text-red-500 error mt-1 text-xs">
-              No Hp Tidak Valid!
-            </p>
-          )}
-          {errors.phone?.type === "maxLength" && (
-            <p className="text-red-500 error mt-1 text-xs">
-              No Hp Tidak Valid!
-            </p>
-          )}
-          {errors.phone?.type === "minLength" && (
-            <p className="text-red-500 error mt-1 text-xs">
-              No Hp Tidak Valid!
-            </p>
-          )}
-          {errors.phone?.type === "required" && (
-            <p className="text-red-500 error mt-1 text-xs">
-              No Hp Wajib Diisi!
+              {errors.phone.message}
             </p>
           )}
         </div>
@@ -101,16 +78,11 @@ const FormText = () => {
             className="shadow appearance-none border rounded py-1 px-3 text-sm focus:outline-none focus:border-orange-300 w-full"
             type="text"
             name="message"
-            {...register("message", { required: true, minLength: 15 })}
+            {...register("message", { required: true})}
           />
-          {errors.message?.type === "required" && (
+          {errors.message && (
             <p className="text-red-500 error mt-1 text-xs">
-              Pesan Wajib Diisi!
-            </p>
-          )}
-          {errors.message?.type === "minLength" && (
-            <p className="text-red-500 error mt-1 text-xs">
-              Isi Pesan Minimal 15 karakter!
+              {errors.message.message}
             </p>
           )}
         </div>

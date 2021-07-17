@@ -11,11 +11,11 @@ const ContactSchema = yup.object().shape({
     .matches(phoneRegExp, "No handphone tidak valid")
     .required("No hp wajib diisi"),
 
-  pesan: yup
+  message: yup
     .string()
     .required("Pesan wajib diisi")
-    .min(10, "Pesan min 10 char")
-    .max(150, "max 150 char"),
+    .min(10, "Pesan min 10 karakter")
+    .max(150, "max 150 karekter"),
 });
 
 export { ContactSchema as default };
