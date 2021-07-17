@@ -73,6 +73,7 @@ const Covid19 = () => {
         </div>
 
       }
+
       {isError && 
       <div>
         <img className="w-42 h-36 mt-10" src="/icon/404.svg" alt="error" />
