@@ -5,25 +5,44 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "commit": "cz"
   },
   "dependencies": {
-    "formik": "^2.2.1",
-    "framer-motion": "^2.9.4",
+    "axios": "^0.21.0",
+    "formik": "^2.2.2",
+    "framer-motion": "^2.9.5",
+    "json-server": "^0.16.2",
+    "lottie-react": "^2.1.0",
     "next": "latest",
+    "postcss": "^8.3.5",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-hook-form": "^7.11.0",
+    "react-query": "^2.26.4",
+    "react-query-devtools": "^2.6.3",
+    "react-spring": "^8.0.27",
+    "recharts": "^1.8.5",
     "sass": "^1.28.0",
     "swiper": "^6.3.5",
-    "tailwindcss": "^1.9.6",
+    "victory": "^35.4.0",
+    "yarn": "^1.22.10",
     "yup": "^0.29.3"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^3.0.0",
-    "autoprefixer": "^10.0.1",
+    "autoprefixer": "^10.3.0",
     "babel-plugin-styled-components": "1.10.6",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "git-cz": "^4.7.6",
     "postcss-flexbugs-fixes": "4.2.1",
     "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^1.9.6"
+    "tailwindcss": "^2.2.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
