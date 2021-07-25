@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar/navbar"
 import React from "react"
 import { motion } from "framer-motion"
 import Content from "../components/content/content"

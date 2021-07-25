@@ -1,4 +1,3 @@
-import Navbar, { penambahan } from "../components/Navbar/navbar"
 import SwiperComp from "../components/Swiper/swiper"
 import { motion } from "framer-motion"
 import SectionCard from "../components/Section-Card/sectionCard"
